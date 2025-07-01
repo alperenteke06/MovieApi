@@ -7,7 +7,7 @@ namespace MovieApi.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=LOCALHOST;initial Catalog=ApiMovieDb; integrated Security=true");
+            optionsBuilder.UseSqlServer("Server=LOCALHOST;initial Catalog=ApiMovieDb; integrated Security=true; TrustServerCertificate=true");
         }
 
         public DbSet<Category> Categories { get; set; }
